@@ -5,19 +5,13 @@ import Card from './card.js';
 
 
 function App() {
-
   const [fruitViceData, setfruitViceData] = useState();
-  // const [gallery_data, setGallery_data] = useState('no data');
-  // const [fruitNames, setFruitNames] = useState('no data');
-
 
   let getData = async () => {
-    // console.log('comeHere')
     await fetch('https://www.fruityvice.com/api/fruit/all', { mode: 'cors' })
       .then(res => {
         return res.json()
       }).then((res) => {
-        // console.log('then', res)
         setfruitViceData(res);
       })
       .catch(err => console.log('err', err));

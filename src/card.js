@@ -6,7 +6,6 @@ function Card(props) {
     const { fruit } = props
     const [modalShow, setModalShow] = useState(false);
     const [src, setSrc] = useState('');
-    const [extra_images, setExtraImages] = useState(null);
     const [images, setImages] = useState(
         [
             "https://passport-media.s3-us-west-1.amazonaws.com/images/eng-intern-interview/apple.png",
@@ -24,11 +23,6 @@ function Card(props) {
             "https://passport-media.s3-us-west-1.amazonaws.com/images/eng-intern-interview/strawberry.png",
             "https://passport-media.s3-us-west-1.amazonaws.com/images/eng-intern-interview/tomato.png",
             "https://passport-media.s3-us-west-1.amazonaws.com/images/eng-intern-interview/watermelon.png"
-            // "fruits/durian.png",
-            // "../fruits/grapes.png",
-            // "./fruits/lime.png",
-            // "fruits/papaya.png",
-            // "./fruits/persimmon.png"
         ]
     );
 
@@ -36,17 +30,7 @@ function Card(props) {
         setModalShow(true);
     }
 
-    function importAll(file_name) {
-        let images = {};
-        file_name.keys().map((item, index) => { images[item.replace('./', '')] = file_name(item); });
-        return images;
-    }
-
     let getImage = () => {
-        console.log('hidshalghlsdg')
-        // images.forEach(element => console.log(element)
-        // );
-        
         for (let i = 0; i < images.length; i++) { 
             console.log(fruit.name);
             if(images[i].toLowerCase().includes(fruit.name.toLowerCase())){
@@ -74,8 +58,6 @@ function Card(props) {
                 src={src}
             />
             <div className='card' onClick={() => HandleShow(true)}>
-             
-                {/* <p>{name}</p> */}
                 <img src={src} width="150" height="150"></img>
             </div>
         </>

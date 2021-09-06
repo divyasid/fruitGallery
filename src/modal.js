@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Modal, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
-import FormCheckInput from 'react-bootstrap/esm/FormCheckInput';
 
 
 function ItemModal(props) {
@@ -14,7 +13,6 @@ function ItemModal(props) {
                 animation={false}>
                     <Modal.Title>{fruit.name}</Modal.Title>
                 <Modal.Body>
-                    {/* <img src={src} alt={fruit.name} /> */}
                     <img src={src} width="100" height="100" ></img>
                     <div>
                         <p>calories : {fruit.nutritions.calories}</p>

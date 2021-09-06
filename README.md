@@ -24,4 +24,3 @@ To make this optimized, we can start rendering to the UI in parallel to parsing 
 
 # Dependencies
 npm install react-bootstrap@next bootstrap@5.1.0
-npm i @material-ui/core
